@@ -18,21 +18,25 @@
       group: root
 
   - name: set wallpaper
+    become_user: joshua
     dconf:
       key: "/org/gnome/desktop/background/picture-uri"
       value: "'file:///usr/share/backgrounds/ansible-wallpaper.jpg"
 
   - name: set wallpaper dark
+    become_user: joshua
     dconf:
       key: "/org/gnome/desktop/background/picture-uri-dark"
       value: "'file:///usr/share/backgrounds/ansible-wallpaper.jpg"
 
   - name: set login wallpaper
+    become_user: joshua
     dconf:
       key: "/org/gnome/desktop/screensaver/picture-uri"
       value: "'file:///usr/share/backgrounds/ansible-wallpaper.jpg"
 
   - name: set wallpaper position
+    become_user: joshua
     dconf:
       key: "/org/gnome/desktop/background/picture-options"
       value: "'zoom'"
